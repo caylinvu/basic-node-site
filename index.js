@@ -7,21 +7,21 @@ const port = 8080;
 // Route functions
 
 app.get('/', (req, res) => {
-  res.sendFile('index.html', {root: __dirname});
+  res.sendFile('html_files/index.html', {root: __dirname});
 });
 
 app.get('/about', (req, res) => {
-  res.sendFile('about.html', {root: __dirname});
+  res.sendFile('html_files/about.html', {root: __dirname});
 });
 
 app.get('/contact-me', (req, res) => {
-  res.sendFile('contact-me.html', {root: __dirname});
+  res.sendFile('html_files/contact-me.html', {root: __dirname});
 });
 
 // Handle 404 responses
 
 app.use((req, res, next) => {
-  res.status(404).sendFile('404.html', {root: __dirname});
+  res.status(404).sendFile('html_files/404.html', {root: __dirname});
 });
 
 // Handle errors
